@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Spadku Dachu - HANDYMAN</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo-link"><img src="img/logo.png" alt="Handyman Logo"></a>
+    </div>
+  </header>
+
+  <main>
+    <h1>Kalkulator Spadku Dachu</h1>
+
+    <!-- Oryginalna funkcjonalność kalkulatora spadku -->
+    <div class="menu">
+      <a href="#" onclick="pokazFormularz('jednospadowy')" class="kafel">Dach Jednospadowy</a>
+      <a href="#" onclick="pokazFormularz('dwuspadowy')" class="kafel">Dach Dwuspadowy</a>
+    </div>
+
+    <div id="jednospadowy" class="form hidden">
+      <h2>Dach Jednospadowy</h2>
+      <label for="h1">Podaj wysokość różnicy płatwi (H) [cm]:</label>
+      <input type="number" id="h1" step="0.1">
+
+      <label for="l1">Podaj całkowitą szerokość konstrukcji (L) [cm]:</label>
+      <input type="number" id="l1" step="0.1">
+
+      <label for="b1">Podaj grubość belki (B) [cm]:</label>
+      <input type="number" id="b1" step="0.1">
+
+      <button class="calculate-btn" onclick="obliczJednospadowy()">Oblicz</button>
+      <div id="wynik1"></div>
+    </div>
+
+    <div id="dwuspadowy" class="form hidden">
+      <h2>Dach Dwuspadowy</h2>
+      <label for="h2">Podaj wysokość kalenicy (H) [cm]:</label>
+      <input type="number" id="h2" step="0.1">
+
+      <label for="b2">Podaj całkowitą szerokość konstrukcji (B) [cm]:</label>
+      <input type="number" id="b2" step="0.1">
+
+      <label for="bm">Podaj grubość belki kalenicowej (B) [cm]:</label>
+      <input type="number" id="bm" step="0.1">
+
+      <button class="calculate-btn" onclick="obliczDwuspadowy()">Oblicz</button>
+      <div id="wynik2"></div>
+    </div>
+  </main>
+
+  <div class="home-button">
+    <a href="index.html">Powrót na Stronę Główną</a>
+  </div>
+
+<footer>
+  <div class="footer-content">
+    <p>© 2025 HANDYMAN - Wszelkie prawa zastrzeżone</p>
+    <div class="footer-icons">
+      <a href="https://www.facebook.com/profile.php?id=100063725341071&locale=pl_PL" target="_blank" rel="noopener noreferrer">
+        <img src="img/facebook.svg" alt="Facebook" />
+      </a>
+      <a href="https://www.tiktok.com/@__handyman__" target="_blank" rel="noopener noreferrer">
+        <img src="img/tiktok.svg" alt="TikTok" />
+      </a>
+      <a href="https://handyman.com.pl" target="_blank" rel="noopener noreferrer">
+        <img src="img/web.svg" alt="Strona" />
+      </a>
+      <a href="tel:+48505403420" target="_blank" rel="noopener noreferrer">
+        <img src="img/phone.svg" alt="Telefon" />
+      </a>
+    </div>
+  </div>
+</footer>
+
+
+  <script defer src="js/kalkulator_spadku.js"></script>
+</body>
+</html>

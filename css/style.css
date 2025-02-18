@@ -1,0 +1,599 @@
+body {
+    font-family: Verdana, sans-serif;
+    background-color: #0f0f0f;
+    color: #d4c19c;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #1c1c1c;
+    padding: 20px;
+}
+
+header img {
+    width: 250px;
+}
+
+main {
+    padding: 40px;
+}
+
+/* Poprawiony styl dla kafelków kalkulatorów */
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+.kafelki-kalkulatory {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.kafelki-kalkulatory .kafelek {
+    background-color: #3a3a3a;
+    color: #f4e1c1;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+    width: 200px;
+}
+
+.kafelki-kalkulatory .kafelek:hover {
+    background-color: #e1be89;
+    transform: scale(1.05);
+    color: #1e1e1e;
+}
+
+/* Ulepszenie .kafel do max-width 300px zamiast stałej szerokości */
+.kafel {
+    display: block;
+    text-decoration: none;
+    background: #a07950;
+    color: #0f0f0f;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 18px 40px;
+    border-radius: 10px;
+    transition: background 0.3s, transform 0.2s;
+    /* width: 300px; usunięte */
+    max-width: 300px;
+    width: 100%; /* zapewnia skalowanie do szerokości kontenera */
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.kafel:hover {
+    background: #b89165;
+    transform: scale(1.05);
+}
+
+/* Styl dla przycisków wyboru w kalkulatorach */
+.choice-btn {
+    display: block;
+    text-decoration: none;
+    background: #d4c19c;
+    color: #0f0f0f;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+    width: 260px;
+    text-align: center;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.choice-btn:hover {
+    background: #e0d0b0;
+    transform: scale(1.05);
+}
+
+/* Styl dla formularzy */
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+    background: #1c1c1c;
+    padding: 25px;
+    border-radius: 10px;
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form label {
+    text-align: left;
+    width: 100%;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #3a3a3a;
+    color: #d4c19c;
+}
+
+.calculate-btn {
+    background: #8b5e3c;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.calculate-btn:hover {
+    background: #a06f47;
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Styl dla przycisku powrotu */
+.home-button {
+    margin-top: 40px;
+}
+
+.home-button a {
+    display: inline-block;
+    text-decoration: none;
+    background: #704c2a;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px 28px;
+    border-radius: 10px;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.home-button a:hover {
+    background: #8a6340;
+    transform: scale(1.05);
+}
+
+/* Kalkulator: domyślnie 100% szerokości, potem w media query >768px -> 50% */
+.calculator {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    background: #3a3a3a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+  .calculator {
+    width: 50%;
+  }
+}
+
+.calculator label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #f4e1c1;
+    text-align: left;
+}
+
+.calculator input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background: #4a4a4a;
+    color: white;
+    font-size: 16px;
+}
+
+.calculator button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: #c2a270;
+    color: #2c2c2c;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.calculator button:hover {
+    background: #e1be89;
+}
+
+footer {
+    background: #1c1c1c;
+    color: #d4c19c;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+#generate-pdf {
+    background-color: #FFA500; /* Pomarańczowy */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%; /* Dostosowanie szerokości */
+    text-align: center;
+}
+
+#generate-pdf:hover {
+    background-color: #FF8C00; /* Ciemnopomarańczowy */
+    transform: scale(1.05);
+}
+
+.sklep-kafel {
+    background: linear-gradient(45deg, #f5e1c0, #d4b692, #b9976b, #8b6e4d, #f5e1c0);
+    background-size: 400% 400%;
+    animation: fadeBeige 5s infinite alternate ease-in-out;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 18px 40px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: block;
+    width: 300px;
+    margin: 20px auto;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.sklep-kafel:hover {
+    transform: scale(1.08);
+}
+
+@keyframes fadeBeige {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Stylizacja elementów wyboru przekroju z wykorzystaniem <details> */
+
+/* Aktualizacja stylów dla wyboru przekroju */
+
+/* Stylizacja dropdownów oraz opcji wyboru przekroju */
+details {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 3px;
+  margin-bottom: 10px;
+  background: #1c1c1c;
+  color: #d4c19c;
+  font-size: 0.8em;
+  max-width: 100%;
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: bold;
+  list-style: none;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 3px;
+}
+
+.predefined-options {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.option-group {
+  border: 1px solid #444;
+  padding: 3px;
+  border-radius: 5px;
+  background: #2c2c2c;
+  margin-bottom: 5px;
+}
+
+.option-group strong {
+  display: block;
+  margin-bottom: 3px;
+}
+
+.option-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
+.option {
+  padding: 3px 6px;
+  background: #3a3a3a;
+  color: #f4e1c1;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  font-size: 0.8em;
+}
+
+.option:hover {
+  background: #e1be89;
+  color: #1e1e1e;
+  transform: scale(1.05);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Stylizacja kontenera do przełączania między dropdownem a wpisaniem własnego przekroju */
+.custom-toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Kontenery dla dropdownu oraz pola tekstowego – rozciągają się na dostępną szerokość */
+.dropdown-wrapper,
+.custom-input-wrapper {
+  flex-grow: 1;
+}
+
+/* Styl przycisku przełączającego – mały, okrągły przycisk wyglądający podobnie do przycisków KVH/BSH */
+.custom-toggle-btn {
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 50%;
+  background: #3a3a3a;
+  color: #f4e1c1;
+  cursor: pointer;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.custom-toggle-btn:hover {
+  background: #e1be89;
+  color: #1e1e1e;
+}
+
+/* Responsywność – dla ekranów poniżej 600px */
+@media (max-width: 600px) {
+  .predefined-options {
+    flex-direction: column;
+  }
+  details {
+    font-size: 0.75em;
+  }
+
+  /* Zmniejszamy padding w .form i .calculator na węższych ekranach */
+  .form {
+    padding: 15px;
+    width: 90%; /* zamiast 320px */
+  }
+
+  .calculator {
+    padding: 15px;
+    width: 100%; /* wąskie ekrany: 100% */
+  }
+}
+
+/* Styl specyficzny dla strony głównej (index.html) */
+#index-page .header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #1c1c1c;
+    padding: 20px;
+}
+
+#index-page .logo-link {
+    margin-bottom: 10px;
+}
+
+#index-page .logo-link img {
+    width: 200px;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+#index-page .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+#index-page .social-icons a img {
+    width: 24px;
+    height: 24px;
+}
+
+#index-page .sklep-kafel {
+    background: #e2a705;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+}
+
+#index-page .sklep-kafel:hover {
+    background: #e2a705;
+    transform: scale(1.05);
+}
+
+/* Układ kafelków kalkulatorów – pozostaje taki sam */
+#index-page .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#index-page .feature {
+    background: #1c1c1c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+#index-page .feature h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+#index-page .feature p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* .kafel omówiony wyżej, tu dla index-page .feature a.kafel zostaje */
+#index-page .feature a.kafel {
+    display: block;
+    text-decoration: none;
+    background: #a07950;
+    color: #0f0f0f;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 0;
+    border-radius: 10px;
+    transition: background 0.3s, transform 0.2s;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+#index-page .feature a.kafel:hover {
+    background: #a9a29a;
+    transform: scale(1.05);
+}
+
+/* Responsywność dla strony głównej */
+@media (max-width: 768px) {
+  #index-page .header-container {
+    padding: 15px;
+  }
+  
+  #index-page .logo-link img {
+    width: 180px;
+  }
+  
+  #index-page .sklep-kafel {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  
+  #index-page .features {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 30px 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  #index-page .logo-link img {
+    width: 150px;
+  }
+  
+  #index-page .social-icons a img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  #index-page .sklep-kafel {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  
+  #index-page .feature a.kafel {
+    font-size: 18px;
+    padding: 15px 20px;
+  }
+}
+
+/* Ikony (SVG) nad nazwą kalkulatorów */
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 10px; 
+  filter: invert(76%) sepia(22%) saturate(210%) hue-rotate(2deg) brightness(95%) contrast(90%);
+}
+
+footer {
+  background: #1c1c1c;
+  color: #d4c19c;
+  text-align: center;
+  padding: 10px;
+  margin-top: 40px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.footer-content p {
+  margin: 0;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-icons img {
+  width: 20px;
+  height: 20px;
+  filter: invert(76%) sepia(22%) saturate(210%) hue-rotate(2deg) brightness(95%) contrast(90%);
+  transition: transform 0.2s;
+}
+
+.footer-icons a:hover img {
+  transform: scale(1.1);
+}

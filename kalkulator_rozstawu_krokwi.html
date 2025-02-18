@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Rozstawu Krokwi - HANDYMAN</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/kalkulator_rozstawu_krokwi.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo-link"><img src="img/logo.png" alt="Handyman Logo"></a>
+    </div>
+  </header>
+
+  <main>
+    <h1>Kalkulator Rozstawu Krokwi</h1>
+    <div class="calculator">
+      <label for="szerokosc_dachu">Szerokość dachu (cm):</label>
+      <input type="number" id="szerokosc_dachu" step="0.1" placeholder="np. 600" required>
+
+      <label for="grubosc_krokwi">Grubość krokwi (cm):</label>
+      <input type="number" id="grubosc_krokwi" step="0.1" placeholder="np. 6" required>
+
+      <label for="ilosc_krokwi">Ilość krokwi:</label>
+      <input type="number" id="ilosc_krokwi" placeholder="np. 4" required>
+
+      <button id="obliczKrokiew">Oblicz</button>
+      <div id="wynik"></div>
+    </div>
+
+    <div class="info-box">
+      <p><strong>⚠️ Wskazówki:</strong></p>
+      <ul>
+        <li>Podaj szerokość dachu i ilość krokwi w centymetrach.</li>
+        <li>Kalkulator uwzględnia również szerokość krokwi w obliczeniach.</li>
+        <li>Otrzymasz dwa wyniki: <strong>Rozstaw krokwi (od środka do środka)</strong> oraz <strong>Rozstaw Pełny</strong> (wszystkie odległości w kolejności).</li>
+      </ul>
+    </div>
+  </main>
+
+  <div class="home-button">
+    <a href="index.html">Powrót na Stronę Główną</a>
+  </div>
+
+<footer>
+  <div class="footer-content">
+    <p>© 2025 HANDYMAN - Wszelkie prawa zastrzeżone</p>
+    <div class="footer-icons">
+      <a href="https://www.facebook.com/profile.php?id=100063725341071&locale=pl_PL" target="_blank" rel="noopener noreferrer">
+        <img src="img/facebook.svg" alt="Facebook" />
+      </a>
+      <a href="https://www.tiktok.com/@__handyman__" target="_blank" rel="noopener noreferrer">
+        <img src="img/tiktok.svg" alt="TikTok" />
+      </a>
+      <a href="https://handyman.com.pl" target="_blank" rel="noopener noreferrer">
+        <img src="img/web.svg" alt="Strona" />
+      </a>
+      <a href="tel:+48505403420" target="_blank" rel="noopener noreferrer">
+        <img src="img/phone.svg" alt="Telefon" />
+      </a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

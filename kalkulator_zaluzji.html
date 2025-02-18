@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Systemów Żaluzji - HANDYMAN</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo-link"><img src="img/logo.png" alt="Handyman Logo"></a>
+    </div>
+  </header>
+
+  <main>
+    <h1>Kalkulator Systemów Żaluzji</h1>
+
+    <!-- Tu pozostawiamy oryginalny formularz i funkcjonalność -->
+    <div class="calculator">
+      <label for="wysokosc">Podaj wysokość przestrzeni (cm):</label>
+      <input type="text" id="wysokosc" placeholder="np. 123,4 lub 123.4">
+      <button onclick="oblicz()">Oblicz</button>
+      <div id="wynik"></div>
+    </div>
+
+    <div class="info-box">
+      <p><strong>⚠️ Wskazówki:</strong></p>
+      <ul>
+        <li>Podaj wymiar w centymetrach, zaokrąglony do jednego miejsca po przecinku.</li>
+        <li>Jeśli planujesz zastosować ramkę, uwzględnij jej grubość w obliczeniach.</li>
+      </ul>
+    </div>
+  </main>
+
+  <div class="home-button">
+    <a href="index.html">Powrót na Stronę Główną</a>
+  </div>
+
+<footer>
+  <div class="footer-content">
+    <p>© 2025 HANDYMAN - Wszelkie prawa zastrzeżone</p>
+    <div class="footer-icons">
+      <a href="https://www.facebook.com/profile.php?id=100063725341071&locale=pl_PL" target="_blank" rel="noopener noreferrer">
+        <img src="img/facebook.svg" alt="Facebook" />
+      </a>
+      <a href="https://www.tiktok.com/@__handyman__" target="_blank" rel="noopener noreferrer">
+        <img src="img/tiktok.svg" alt="TikTok" />
+      </a>
+      <a href="https://handyman.com.pl" target="_blank" rel="noopener noreferrer">
+        <img src="img/web.svg" alt="Strona" />
+      </a>
+      <a href="tel:+48505403420" target="_blank" rel="noopener noreferrer">
+        <img src="img/phone.svg" alt="Telefon" />
+      </a>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Skrypt oryginalny -->
+  <script defer src="js/kalkulator_zaluzji.js"></script>
+</body>
+</html>

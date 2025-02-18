@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Zabudowy Żaluzjami - HANDYMAN</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo-link"><img src="img/logo.png" alt="Handyman Logo"></a>
+    </div>
+  </header>
+
+  <main>
+    <h1>Kalkulator Zabudowy Żaluzjami</h1>
+    <form id="zaluzjeForm">
+      <div>
+        <label for="szerokosc">Szerokość światła zabudowy (cm):</label>
+        <input type="number" id="szerokosc" required>
+      </div>
+      <div>
+        <label for="wysokosc">
+          Wysokość światła zabudowy (cm):
+          <small>Proszę podać najmniejszy wymiar na całej szerokości miejsca zabudowy</small>
+        </label>
+        <input type="number" id="wysokosc" required>
+      </div>
+      <div>
+        <label for="przekroj_ramki">Przekrój ramki (np. 4.5x95):</label>
+        <input type="text" id="przekroj_ramki" required>
+      </div>
+      <button type="button" id="obliczZaluzjeBtn">Oblicz</button>
+    </form>
+    
+    <div id="wynikZaluzje"></div>
+    
+    <button id="pobierzRysunekBtn">Pobierz rysunek techniczny</button>
+  </main>
+  
+  <div class="home-button">
+    <a href="index.html">Powrót na Stronę Główną</a>
+  </div>
+
+<footer>
+  <div class="footer-content">
+    <p>© 2025 HANDYMAN - Wszelkie prawa zastrzeżone</p>
+    <div class="footer-icons">
+      <a href="https://www.facebook.com/profile.php?id=100063725341071&locale=pl_PL" target="_blank" rel="noopener noreferrer">
+        <img src="img/facebook.svg" alt="Facebook" />
+      </a>
+      <a href="https://www.tiktok.com/@__handyman__" target="_blank" rel="noopener noreferrer">
+        <img src="img/tiktok.svg" alt="TikTok" />
+      </a>
+      <a href="https://handyman.com.pl" target="_blank" rel="noopener noreferrer">
+        <img src="img/web.svg" alt="Strona" />
+      </a>
+      <a href="tel:+48505403420" target="_blank" rel="noopener noreferrer">
+        <img src="img/phone.svg" alt="Telefon" />
+      </a>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Skrypt do kalkulatora materiałów żaluzji -->
+  <script src="js/kalkulator_materialow_zaluzje.js"></script>
+</body>
+</html>
