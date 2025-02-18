@@ -52,7 +52,7 @@ main {
     color: #1e1e1e;
 }
 
-/* Ulepszenie .kafel do max-width 300px zamiast stałej szerokości */
+/* Ulepszona definicja przycisku .kafel (na stronach kalkulatorów) */
 .kafel {
     display: block;
     text-decoration: none;
@@ -65,11 +65,10 @@ main {
     transition: background 0.3s, transform 0.2s;
     /* width: 300px; usunięte */
     max-width: 300px;
-    width: 100%; /* zapewnia skalowanie do szerokości kontenera */
+    width: 100%; /* Zapewnia skalowanie do szerokości kontenera */
     text-align: center;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
-
 .kafel:hover {
     background: #b89165;
     transform: scale(1.05);
@@ -90,7 +89,6 @@ main {
     text-align: center;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
-
 .choice-btn:hover {
     background: #e0d0b0;
     transform: scale(1.05);
@@ -110,12 +108,10 @@ main {
     margin-left: auto;
     margin-right: auto;
 }
-
 .form label {
     text-align: left;
     width: 100%;
 }
-
 .form input {
     width: 100%;
     padding: 10px;
@@ -138,7 +134,6 @@ main {
     width: 100%;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
-
 .calculate-btn:hover {
     background: #a06f47;
     transform: scale(1.05);
@@ -152,7 +147,6 @@ main {
 .home-button {
     margin-top: 40px;
 }
-
 .home-button a {
     display: inline-block;
     text-decoration: none;
@@ -165,13 +159,16 @@ main {
     transition: background 0.3s, transform 0.2s;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
-
 .home-button a:hover {
     background: #8a6340;
     transform: scale(1.05);
 }
 
-/* Kalkulator: domyślnie 100% szerokości, potem w media query >768px -> 50% */
+/* Kalkulator:
+   - Domyślnie zajmuje 100% (szerokość)
+   - max-width: 500px
+   - powyżej 768px => width: 50%
+*/
 .calculator {
     width: 100%;
     max-width: 500px;
@@ -182,7 +179,6 @@ main {
     box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
 }
-
 @media (min-width: 768px) {
   .calculator {
     width: 50%;
@@ -196,7 +192,6 @@ main {
     color: #f4e1c1;
     text-align: left;
 }
-
 .calculator input {
     width: 100%;
     padding: 8px;
@@ -207,7 +202,6 @@ main {
     color: white;
     font-size: 16px;
 }
-
 .calculator button {
     width: 100%;
     padding: 12px;
@@ -221,7 +215,6 @@ main {
     cursor: pointer;
     transition: 0.3s;
 }
-
 .calculator button:hover {
     background: #e1be89;
 }
@@ -234,6 +227,7 @@ footer {
     margin-top: 40px;
 }
 
+/* Generowanie PDF */
 #generate-pdf {
     background-color: #FFA500; /* Pomarańczowy */
     color: white;
@@ -244,15 +238,15 @@ footer {
     border-radius: 8px;
     margin-top: 10px;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    width: 100%; /* Dostosowanie szerokości */
+    width: 100%;
     text-align: center;
 }
-
 #generate-pdf:hover {
     background-color: #FF8C00; /* Ciemnopomarańczowy */
     transform: scale(1.05);
 }
 
+/* Sklep-kafel gradient */
 .sklep-kafel {
     background: linear-gradient(45deg, #f5e1c0, #d4b692, #b9976b, #8b6e4d, #f5e1c0);
     background-size: 400% 400%;
@@ -270,22 +264,17 @@ footer {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease-in-out;
 }
-
 .sklep-kafel:hover {
     transform: scale(1.08);
 }
 
 @keyframes fadeBeige {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
-/* Stylizacja elementów wyboru przekroju z wykorzystaniem <details> */
-
-/* Aktualizacja stylów dla wyboru przekroju */
-
-/* Stylizacja dropdownów oraz opcji wyboru przekroju */
+/* Stylizacja elementów wyboru przekroju (<details>) */
 details {
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -296,13 +285,11 @@ details {
   font-size: 0.8em;
   max-width: 100%;
 }
-
 details summary {
   cursor: pointer;
   font-weight: bold;
   list-style: none;
 }
-
 details[open] summary {
   border-bottom: 1px solid #ccc;
   margin-bottom: 3px;
@@ -314,7 +301,6 @@ details[open] summary {
   flex-wrap: wrap;
   gap: 5px;
 }
-
 .option-group {
   border: 1px solid #444;
   padding: 3px;
@@ -322,18 +308,15 @@ details[open] summary {
   background: #2c2c2c;
   margin-bottom: 5px;
 }
-
 .option-group strong {
   display: block;
   margin-bottom: 3px;
 }
-
 .option-buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 3px;
 }
-
 .option {
   padding: 3px 6px;
   background: #3a3a3a;
@@ -344,31 +327,22 @@ details[open] summary {
   transition: background 0.3s, transform 0.2s;
   font-size: 0.8em;
 }
-
 .option:hover {
   background: #e1be89;
   color: #1e1e1e;
   transform: scale(1.05);
 }
 
-.hidden {
-  display: none;
-}
-
-/* Stylizacja kontenera do przełączania między dropdownem a wpisaniem własnego przekroju */
+/* Kontener do przełączania między dropdownem a wpisaniem własnego przekroju */
 .custom-toggle-container {
   display: flex;
   align-items: center;
   gap: 5px;
 }
-
-/* Kontenery dla dropdownu oraz pola tekstowego – rozciągają się na dostępną szerokość */
 .dropdown-wrapper,
 .custom-input-wrapper {
   flex-grow: 1;
 }
-
-/* Styl przycisku przełączającego – mały, okrągły przycisk wyglądający podobnie do przycisków KVH/BSH */
 .custom-toggle-btn {
   width: 24px;
   height: 24px;
@@ -383,7 +357,6 @@ details[open] summary {
   justify-content: center;
   transition: background 0.3s;
 }
-
 .custom-toggle-btn:hover {
   background: #e1be89;
   color: #1e1e1e;
@@ -401,12 +374,11 @@ details[open] summary {
   /* Zmniejszamy padding w .form i .calculator na węższych ekranach */
   .form {
     padding: 15px;
-    width: 90%; /* zamiast 320px */
+    width: 90%; /* zamiast sztywnego 320px */
   }
-
   .calculator {
     padding: 15px;
-    width: 100%; /* wąskie ekrany: 100% */
+    width: 100%; /* na wąskim ekranie */
   }
 }
 
@@ -418,29 +390,24 @@ details[open] summary {
     background: #1c1c1c;
     padding: 20px;
 }
-
 #index-page .logo-link {
     margin-bottom: 10px;
 }
-
 #index-page .logo-link img {
     width: 200px;
     max-width: 100%;
     display: block;
     margin: 0 auto;
 }
-
 #index-page .social-icons {
     display: flex;
     gap: 15px;
     margin-bottom: 10px;
 }
-
 #index-page .social-icons a img {
     width: 24px;
     height: 24px;
 }
-
 #index-page .sklep-kafel {
     background: #e2a705;
     color: white;
@@ -453,13 +420,12 @@ details[open] summary {
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
     margin-bottom: 10px;
 }
-
 #index-page .sklep-kafel:hover {
     background: #e2a705;
     transform: scale(1.05);
 }
 
-/* Układ kafelków kalkulatorów – pozostaje taki sam */
+/* Układ kafelków kalkulatorów na stronie głównej */
 #index-page .features {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -468,7 +434,6 @@ details[open] summary {
     max-width: 1200px;
     margin: 0 auto;
 }
-
 #index-page .feature {
     background: #1c1c1c;
     padding: 20px;
@@ -476,35 +441,31 @@ details[open] summary {
     box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
     text-align: center;
 }
-
 #index-page .feature h2 {
     font-size: 24px;
     margin-bottom: 15px;
 }
-
 #index-page .feature p {
     font-size: 16px;
     margin-bottom: 20px;
 }
 
-/* .kafel omówiony wyżej, tu dla index-page .feature a.kafel zostaje */
+/* Ulepszony przycisk w kafelku kalkulatora: inline-block, auto-size */
 #index-page .feature a.kafel {
-    display: block;
+    display: inline-block;     /* zamiast block => dostosowuje się do treści */
+    box-sizing: border-box;
     text-decoration: none;
     background: #a07950;
     color: #0f0f0f;
     font-size: 20px;
     font-weight: bold;
-    padding: 15px 0;
+    padding: 15px 20px;
     border-radius: 10px;
     transition: background 0.3s, transform 0.2s;
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
     text-align: center;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;   /* wyśrodkowanie w obrębie kafelka */
 }
-
 #index-page .feature a.kafel:hover {
     background: #a9a29a;
     transform: scale(1.05);
@@ -515,41 +476,34 @@ details[open] summary {
   #index-page .header-container {
     padding: 15px;
   }
-  
   #index-page .logo-link img {
     width: 180px;
   }
-  
   #index-page .sklep-kafel {
     font-size: 14px;
     padding: 10px 20px;
   }
-  
   #index-page .features {
     grid-template-columns: 1fr;
     gap: 20px;
     padding: 30px 10px;
   }
 }
-
 @media (max-width: 600px) {
   #index-page .logo-link img {
     width: 150px;
   }
-  
   #index-page .social-icons a img {
     width: 20px;
     height: 20px;
   }
-  
   #index-page .sklep-kafel {
     font-size: 14px;
     padding: 10px 20px;
   }
-  
   #index-page .feature a.kafel {
     font-size: 18px;
-    padding: 15px 20px;
+    padding: 12px 16px; /* zmniejszone w pionie i poziomie, by lepiej pasowało do wąskich ekranów */
   }
 }
 
@@ -558,6 +512,7 @@ details[open] summary {
   width: 48px;
   height: 48px;
   margin: 0 auto 10px; 
+  /* Filtr zbliżający biały SVG do koloru beż (#d4c19c) */
   filter: invert(76%) sepia(22%) saturate(210%) hue-rotate(2deg) brightness(95%) contrast(90%);
 }
 
@@ -577,23 +532,19 @@ footer {
   margin: 0 auto;
   width: 90%;
 }
-
 .footer-content p {
   margin: 0;
 }
-
 .footer-icons {
   display: flex;
   gap: 15px;
 }
-
 .footer-icons img {
   width: 20px;
   height: 20px;
   filter: invert(76%) sepia(22%) saturate(210%) hue-rotate(2deg) brightness(95%) contrast(90%);
   transition: transform 0.2s;
 }
-
 .footer-icons a:hover img {
   transform: scale(1.1);
 }
