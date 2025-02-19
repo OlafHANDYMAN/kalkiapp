@@ -8,63 +8,47 @@
 </head>
 <body>
   <header>
-    <div class="header-container">
-      <a href="index.html" class="logo-link"><img src="img/logo.png" alt="Handyman Logo"></a>
-    </div>
+    <a href="index.html"><img src="img/logo.png" alt="Handyman Logo" style="width:200px;"></a>
   </header>
 
   <main>
     <h1>Kalkulator Zabudowy Żaluzjami</h1>
-    <form id="zaluzjeForm">
-      <div>
-        <label for="szerokosc">Szerokość światła zabudowy (cm):</label>
-        <input type="number" id="szerokosc" required>
-      </div>
-      <div>
-        <label for="wysokosc">
-          Wysokość światła zabudowy (cm):
-          <small>Proszę podać najmniejszy wymiar na całej szerokości miejsca zabudowy</small>
-        </label>
-        <input type="number" id="wysokosc" required>
-      </div>
-      <div>
-        <label for="przekroj_ramki">Przekrój ramki (np. 4.5x95):</label>
-        <input type="text" id="przekroj_ramki" required>
-      </div>
-      <button type="button" id="obliczZaluzjeBtn">Oblicz</button>
-    </form>
-    
-    <div id="wynikZaluzje"></div>
-    
-    <button id="pobierzRysunekBtn">Pobierz rysunek techniczny</button>
+
+    <!-- Zastosowano klasę .calculator, podobnie jak w kalkulatorze materiałów -->
+    <div class="calculator">
+      <label for="szerokosc">Szerokość światła zabudowy (cm):</label>
+      <input type="number" id="szerokosc" required>
+
+      <label for="wysokosc">
+        Wysokość światła zabudowy (cm): 
+        <small style="font-weight: normal; color: #ccc;">Proszę podać najmniejszy wymiar na całej szerokości miejsca zabudowy</small>
+      </label>
+      <input type="number" id="wysokosc" required>
+
+      <label for="przekroj_ramki">Przekrój ramki (np. 4.5x95):</label>
+      <input type="text" id="przekroj_ramki" required>
+
+      <!-- Przycisk oblicz -->
+      <button type="button" id="obliczZaluzjeBtn" class="calculate-btn">Oblicz</button>
+
+      <!-- Div na wyniki -->
+      <div id="wynikZaluzje" style="margin-top:20px;"></div>
+
+      <!-- Przycisk pobierz rysunek -->
+      <button type="button" id="pobierzRysunekBtn" class="calculate-btn">Pobierz rysunek techniczny</button>
+    </div>
+
   </main>
-  
+
   <div class="home-button">
     <a href="index.html">Powrót na Stronę Główną</a>
   </div>
 
-<footer>
-  <div class="footer-content">
+  <footer>
     <p>© 2025 HANDYMAN - Wszelkie prawa zastrzeżone</p>
-    <div class="footer-icons">
-      <a href="https://www.facebook.com/profile.php?id=100063725341071&locale=pl_PL" target="_blank" rel="noopener noreferrer">
-        <img src="img/facebook.svg" alt="Facebook" />
-      </a>
-      <a href="https://www.tiktok.com/@__handyman__" target="_blank" rel="noopener noreferrer">
-        <img src="img/tiktok.svg" alt="TikTok" />
-      </a>
-      <a href="https://handyman.com.pl" target="_blank" rel="noopener noreferrer">
-        <img src="img/web.svg" alt="Strona" />
-      </a>
-      <a href="tel:+48505403420" target="_blank" rel="noopener noreferrer">
-        <img src="img/phone.svg" alt="Telefon" />
-      </a>
-    </div>
-  </div>
-</footer>
+  </footer>
 
-
-  <!-- Skrypt do kalkulatora materiałów żaluzji -->
+  <!-- Skrypt kalkulatora -->
   <script src="js/kalkulator_materialow_zaluzje.js"></script>
 </body>
 </html>
